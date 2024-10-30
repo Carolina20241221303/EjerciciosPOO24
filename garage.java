@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 // Interfaz iGarage
-interface iGarage {
+public interface iGarage {
     double calcularIngresos();
     int calcularOcupacionPorTipoVehiculo(Vehiculo v);
 }
 
 // Clase Vehiculo
-class Vehiculo {
+public class Vehiculo {
     protected String matricula;
     protected String marca;
     protected double precio;
@@ -69,7 +69,7 @@ class Vehiculo {
 }
 
 // Clase Moto
-class Moto extends Vehiculo {
+public class Moto extends Vehiculo {
     private boolean tieneSidecar;
 
     public Moto(String marca, double precio, int cilindrada, boolean tieneSidecar) {
@@ -89,10 +89,9 @@ class Moto extends Vehiculo {
 }
 
 // Clase Coche
-class Coche extends Vehiculo {
+public class Coche extends Vehiculo {
     private boolean tieneRadio;
     private boolean tieneNavegador;
-
     public Coche(String marca, double precio, int cilindrada, boolean tieneRadio, boolean tieneNavegador) {
         super(marca, precio, cilindrada);
         this.tieneRadio = tieneRadio;
@@ -116,7 +115,7 @@ class Coche extends Vehiculo {
 }
 
 // Clase Garaje
-class Garaje implements iGarage {
+public class Garaje implements iGarage {
     private static final int NUM_PLAZAS = 10;
     private Vehiculo[] plazas;
     private int ocupacion;
@@ -173,8 +172,8 @@ class Garaje implements iGarage {
     }
 }
 
-// Menú para la gestión del Garaje
-public class Main {
+// prueba
+public class pruebaGarage{
     public static void main(String[] args) {
         Garaje garaje = new Garaje();
         Scanner scanner = new Scanner(System.in);
